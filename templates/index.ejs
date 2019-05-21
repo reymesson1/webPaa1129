@@ -1,4 +1,10 @@
+<% var plantRateSum = 0;  %>
+<% var fecha = "";  %>
+<% var fechaentrega = "";  %>
+<% var idorder = "";  %>
+<% var quantity = 0;  %>
 <html>
+
 <head>
     <title>EJS to PDF Example</title>
     <style>
@@ -6,50 +12,119 @@
             width: 100%;
             border: solid 1px black;
         }
+        .table-footer {
+            width: 50%;
+            border: solid 1px black;
+            float: right;
+        }
 
-        .header {
-            font-size: 16px;
+        .header {                                                                                                          
+            font-size: 30px;                                                                                               
             font-weight: bold;
-        }
-        .row {
-            width: 100%;
-            font-size: 16px;
-            font-weight: 200;
-        }
-
-        .row > td, .header > th {
-            width: 33%;
-        }
-    </style>
-</head>
-<body>
-    <table class="table">
-        <thead class="header">
+        }                                                                                                                  
+        .row {                                                                                                             
+            width: 100%;                                                                                                   
+            font-size: 30px;                                                                                               
+            font-weight: 200;                                                                                              
+        }                                                                                                                  
+                                                                                                                           
+        .row > td, .header > th {                                                                                          
+            width: 33%;                                                                                                    
+        }                                                                                                                  
+        .title{                                                                                                            
+            text-align: center;                                                                                            
+        }                                                                                                                  
+    </style>                                                                                                               
+</head>                                                                                                                    
+<body>                                                                                                                     
+    <table class="table">                                                                                                  
+        <thead class="header">                                                                                             
+            <th>                                                                                                           
+               ID                                                                                                          
+            </th>                                                                                                          
             <th>
-                Name
+               Nombre                                                                                                      
+            </th>                                                                                                          
+            <th>                                                                                                           
+               Articulo                                                                                                    
+            </th>                                                                                                          
+            <th>                                                                                                           
+               Tipo de Servicio                                                                                            
+            </th>                                                                                                          
+            <th>                                                                                                           
+                Precio                                                                                                     
+            </th>                                                                                                          
+        </thead>                                                                                                           
+        <tbody>                                                                                                            
+                <tr class="row">                                                                                           
+                        <br/>                                                                                              
+                        <br/>                                                                                              
+                        <br/>                                                                                              
+                        <br/>                                                                                              
+                        <br/>                                                                                              
+                        <br/>                                                                                              
+                        <h1 class="title" style="font-size:50px;">LAVANDERIA PLANTAKI</h1>                                  
+                        <h5 class="title" style="font-size:20px;" >Av. Romulo Betancourt No. 1516 esq 12 de Julio</h5>
+                        <h4 class="title" style="font-size:20px" >Plaza Thalys, Bella Vista, Sto. Dgo.</h4>                
+                        <h5 class="title" style="font-size:40px" >Tel.: 829 594-8430</h5>                                  
+                        <h5 class="title" style="font-size:20px" >Horario Lunes a Viernes 7:30am a 7:00pm</h5>             
+                        <h5 class="title" style="font-size:20px" >Sabado 8:30am a 5:00pm</h5>                              
+                        <h5 class="title" style="font-size:20px" >RNC: 13157658</h5>                                       
+                </tr>                                                                                                      
+             <% item.forEach(function (employee,index) { %>                                                                
+                <tr class="row">                                                                                           
+                    <td>                                                                                                   
+                        <%= index %>                                                                                       
+                    </td>                                                                                                  
+                    <td style="font-weight: bold !important;"  >                                                           
+                        &nbsp;&nbsp;<%= employee.firstname %>                                                              
+                    </td>                                                                                                  
+                    <td>                                                                                                   
+                        <%= employee.item %>                                                                               
+                    </td>                                                                                                  
+                    <td>                                                                                                   
+                        <%= employee.development %>                                                                        
+                    </td>                                                                                                  
+                    <td>                                                                                                   
+                        <%= employee.project %>
+                    </td>                                                                                                  
+                    <% plantRateSum += employee.project %>                                                                 
+                    <% fecha = employee.date %>                                                                            
+                    <% fechaentrega = employee.fechaentrega %>                                                             
+                    <% idorder = employee.id %>                                                                            
+                    <% quantity += employee.quantity %>                                                                    
+                </tr>                                                                                                      
+            <% })%>                                                                                                        
+        </tbody>                                                                                                           
+    </table>                                                                                                               
+    <br/>                                                                                                                  
+    <table class="table-footer">                                                                                           
+        <thead class="header">                                                                                             
+            <th>                                                                                                           
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                           
+            </th>                                                                                                          
+            <th style="font-size:30px !important;"  >                                                                      
+                Total                                                                                                      
+            </th>                                                                                                          
+            <th style="font-size:25px !important;"  >                                                                      
+                <%= plantRateSum %>                                                                                        
             </th>
-            <th>
-                Age
-            </th>
-            <th>
-                Salary
-            </th>
-        </thead>
-        <tbody>
-            <% item.forEach(function (employee) { %>
-                <tr class="row">
-                    <td>
-                        <%= employee.firstname %>
-                    </td>
-                    <!-- <td>
-                        <%= employee.age %>
-                    </td>
-                    <td>
-                        <%= employee.salary %>
-                    </td> -->
-                </tr>
-            <% })%>
-        </tbody>
-    </table>
-</body>
-</html>
+        </thead>                                                                                                           
+    </table>                                                                                                               
+<br/>                                                                                                                      
+<br/>                                                                                                                      
+<h1>&nbsp;</h1>                                                                                                            
+<br/>                                                                                                                      
+<br/>                                                                                                                      
+<h2>&nbsp;&nbsp;&nbsp; No. Orden   <%= idorder %></h2>                                                                     
+<h2>&nbsp;&nbsp;&nbsp; Fecha recibido   <%= fecha %></h2>                                                                  
+<h2>&nbsp;&nbsp;&nbsp; Fecha entrega   <%= fechaentrega %></h2>                                                            
+<h2>&nbsp;&nbsp;&nbsp; Cantidad de piezas   <%= quantity %></h2>                                                           
+<h5>&</h5>                                                                                                                 
+<br/>                                                                                                                      
+<h1>&nbsp;</h1>                                                                                                            
+<h3>&nbsp;&nbsp;Gracias por preferirnos</h3>                                                                               
+<br/>                                                                                                                      
+<br/>                                                                                                                      
+</body>                                                                                                                    
+</html>    
