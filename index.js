@@ -51,12 +51,12 @@ app.get('/:id', async (req, res) =>{
 });
 
 
-mongoose.connect('mongodb://localhost:27017/supreme',(err)=>{
+mongoose.connect('mongodb://localhost:27017/eltendedero',(err)=>{
     if(!err){
         console.log('Connected to mongo Database');
     }
 })
 
-app.listen(3000, function(){
-console.log('Listening on 3000');
+app.listen(3001, function(){
+console.log('Listening on 3001');
 });

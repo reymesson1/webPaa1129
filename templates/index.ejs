@@ -33,6 +33,12 @@
         }                                                                                                                  
         .title{                                                                                                            
             text-align: center;                                                                                            
+        }
+        .table-forma {            
+            width: 100%;
+            border: solid 1px black;
+            float: left;
+            
         }                                                                                                                  
     </style>                                                                                                               
 </head>                                                                                                                    
@@ -112,18 +118,20 @@
         </thead>                                                                                                           
     </table>                                                                                                               
     <br/>
-    <table class="table-footer">                                                                                           
-        <thead class="header">                                                                                             
-            <th>                                                                                                           
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                           
-            </th>                                                                                                          
-            <th style="font-size:30px !important;"  >                                                                      
-                Forma
-            </th>                                                                                                          
-            <th style="font-size:25px !important;"  >                                                                      
-                <%= plantRateSum %>                                                                                        
-            </th>
-        </thead>                                                                                                           
+    <table class="table-forma">                                                                                           
+        <thead class="header">                                                                                                         
+            <th style="font-size:30px !important;float:left;"  >                                                                      
+                Forma pa
+            </th>                                                                                                                      
+        </thead>  
+        <tbody>
+            <tr>
+                <td style="padding:20px;text-decoration: underline;">Forma</td>
+                <td style="padding:20px;text-decoration: underline;">Below</td>
+                <td style="padding:20px;text-decoration: underline;">Mount</td>
+            </tr>
+            
+        </tbody>                                                                                                         
     </table>                                                                                                               
 <br/>                                                                                                                      
 <br/>                                                                                                                      
