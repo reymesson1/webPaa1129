@@ -69,7 +69,7 @@
                         <br/>                                                                                              
                         <br/>                                                                                              
                         <br/>                                                                                              
-                        <h1 class="title" style="font-size:50px;">LAVANDERIA PLANCHAKI</h1>                                  
+                        <!-- <h1 class="title" style="font-size:50px;">LAVANDERIA PLANCHAKI</h1>                                   -->
                         <h5 class="title" style="font-size:20px;" >Calle. Desiderio Arias esq Juan Miguel Roman</h5>
                         <h4 class="title" style="font-size:20px" >Bella Vista, Sto. Dgo.</h4>                
                         <h5 class="title" style="font-size:40px" >Tel.: 809 638-9999</h5>                                  
@@ -103,19 +103,51 @@
             <% })%>                                                                                                        
         </tbody>                                                                                                           
     </table>                                                                                                               
-    <br/>                                                                                                                  
-    <table class="table-footer">                                                                                           
+    <br/>                                                                                                                      
+    <table class="table">                                                                                           
         <thead class="header">                                                                                             
-            <th>                                                                                                           
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                                           
+            <th style="font-size:20px !important;float: left;">
+                Total:     
             </th>                                                                                                          
-            <th style="font-size:30px !important;"  >                                                                      
+            <th style="font-size:20px !important;float: left;">
+                14 Piezas
+            </th>
+            <th style="font-size:20px !important;">
+                Itbis:     
+            </th>                                                                                                          
+            <th style="font-size:20px !important;">
+                234.92
+            </th>
+            <th style="font-size:30px !important;">
                 Total                                                                                                      
             </th>                                                                                                          
-            <th style="font-size:25px !important;"  >                                                                      
+            <th style="font-size:30px !important;">
                 <%= plantRateSum %>                                                                                        
             </th>
-        </thead>                                                                                                           
+        </thead>                                 
+        <tbody>
+            <tr>                
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Abono:</td>
+                <td>0.00</td>
+            </tr>
+            <tr>                                
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Desc:</td>
+                <td>0.00</td>
+            </tr>
+            <tr>                                
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Total a pagar:</td>
+                <td>1540.00</td>
+            </tr>
+        </tbody>                                                                          
     </table>                                                                                                               
     <br/>
     <table class="table-forma">                                                                                           
@@ -130,9 +162,56 @@
                 <td style="padding:20px;text-decoration: underline;">Banco</td>
                 <td style="padding:20px;text-decoration: underline;">Monto</td>
             </tr>
-            
+            <tr>
+                <td style="font-weight:bold; font-size:30px;" >Saldo Pendiente:</td>
+                <td></td>
+                <td>1,540.00</td>
+            </tr>                        
         </tbody>                                                                                                         
-    </table>                                                                                                               
+    </table>                
+    <br/>                                                                                               
+    <table class="table">                                                                                           
+        <thead>                                                                                                         
+            <th style="font-size:20px !important;"  >                                                                      
+                Dias de entrega:
+            </th>                                                                                                                      
+            <th style="font-size:20px;font-weight:normal;"  >                                                                      
+                 Viernes 21/12/18
+            </th>                                                                                                                     
+            <th style="font-size:20px !important;"  >                                                                      
+                Hora:
+            </th>                                                                                                                      
+            <th style="font-size:20px;font-weight:normal;"  >                                                                      
+                 01:59pm
+            </th>                                                                                                                     
+        </thead>          
+    </table>                
+    <br/>                                                                                               
+    <table class="table">                                                                                           
+        <thead >                                                                                                         
+            <th style="font-size:20px !important;"  >                                                                      
+                Condiciones de lavado y/o Planchado
+            </th>                                                                                                                          
+        </thead>          
+        <tbody>
+            <tr>
+                <td style="font-weight:bold;">1- NO SE ENTREGARA ROPA SIN ESTE RECIBO</td>
+            </tr>
+            <tr><td>2- Esta Orden vence en 30 dias pasados este tiempo su ropa sera declarada en en abandono y sera donada</td></tr>
+            <tr><td>3- Despues que entregamos no somos responsable de su ropa</td></tr>
+            <tr><td>4- No hay garantia de prendas elaboradas con telas de mala calidad que destiñe, ropa recibida percudidas o con manchas rebeldes</td></tr>
+            <tr><td>5- No somos responsables por mancha tratas que no ha sido removidas y no hay devolucion de dinero. Ya que el servicio brindado requiere inversion en la aplicacion productos especiales para desmanchar y el tiempo del personal</td></tr>
+            <tr><td>6- En caso de perdidas o daños, muestra responsabilidad maxima es el 30% del costo de la prenda y se pagara en servicio consumidos</td></tr>
+            <tr><td>7- La aceptacion a esta Orden o Factura es señal de conformidad a estas condiciones</td></tr>
+        </tbody>        
+    </table>    
+    <table class="table">                                                                                           
+            <thead >                                                                                                         
+                <th style="font-size:20px !important;"  >                                                                      
+                    GRACIAS POR SU VISITA!
+                </th>                                                                                                                          
+            </thead>          
+    </table>
 <br/>                                                                                                                      
 <br/>                                                                                                                      
 <h1>&nbsp;</h1>                                                                                                            
@@ -145,8 +224,8 @@
 <h5>&</h5>                                                                                                                 
 <br/>                                                                                                                      
 <h1>&nbsp;</h1>                                                                                                            
-<h3>&nbsp;&nbsp;Gracias por preferirnos</h3>                                                                               
-<br/>                                                                                                                      
-<br/>                                                                                                                      
-</body>                                                                                                                    
-</html>    
+<h3>&nbsp;&nbsp;Gracias por preferirnos</h3>
+<br/>
+<br/>
+</body>
+</html>
