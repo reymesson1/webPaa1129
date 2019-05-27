@@ -156,14 +156,14 @@
         </thead>                                                                                                           
         <tbody>                
              <% item.forEach(function (employee,index) { %>                                                                
-                <tr class="row">                                                                                           
+                <tr class="row">
                     <td>                                                                                                   
-                        <%= index %>                                                                                       
-                    </td>                                                                                                  
+                        <%= employee.quantity %>  
+                    </td>
                     <td style="font-weight: bold !important;"  >                                                           
                         &nbsp;&nbsp;<%= employee.firstname %>                                                              
-                    </td>                                                                                                  
-                    <td>                                                                                                   
+                    </td>
+                    <td>
                         <%= employee.item %>                                                                               
                     </td>                                                                                                  
                     <td>                                                                                                   
@@ -184,10 +184,10 @@
     <table class="table">                                                                                           
         <thead class="header">                                                                                             
             <th style="font-size:25px !important;float: left;">
-                Total:     
+                Total de piezas:     
             </th>                                                                                                          
             <th style="font-size:25px !important;float: left;">
-                14 Piezas
+                <td><%= JSON.stringify(quantity); %></td>
             </th>
             <th style="font-size:25px !important;">
                 Itbis:     
