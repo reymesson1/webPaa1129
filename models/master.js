@@ -6,6 +6,7 @@ var userSchema = new mongoose.Schema({
     idOrder: String,
     date: String,
     name: String,
+    time: String,
     project: Number,
     agregado: Number,
     desc: Number,
